@@ -36,8 +36,11 @@
             </div>
 
             @if($products->isEmpty())
-                <div class="text-center py-3xl">
-                    <p class="text-xl text-gray">ไม่พบสินค้า</p>
+                <div class="text-center py-3xl animate-fade-in card p-2xl">
+                    <div style="font-size: 4rem; margin-bottom: var(--spacing-md);">🔍</div>
+                    <h3 class="text-gray mb-md">ไม่พบสินค้าที่คุณค้นหา</h3>
+                    <p class="text-gray-light mb-lg">ลองเปลี่ยนคำค้นหาหรือเลือกหมวดหมู่อื่นดูนะครับ</p>
+                    <a href="{{ route('products.index') }}" class="btn btn-outline">ดูสินค้าทั้งหมด</a>
                 </div>
             @else
                 <div class="grid grid-cols-4">
