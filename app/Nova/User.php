@@ -89,7 +89,7 @@ class User extends Resource
 
     public static function authorizedToViewAny(Request $request): bool
     {
-        return $request->user()->isAdmin();
+        return $request->user()?->isAdmin() ?? false;
     }
 
     /**
